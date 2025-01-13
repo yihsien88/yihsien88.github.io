@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-tw">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,114 +8,132 @@
     <style>
         /* 使用自定義字體 */
         @font-face {
-            font-family: 'ChenYuluoyan'; /* 設定字體名稱 */
-            src: url('./font/ChenYuluoyan-Thin.ttf') format('truetype'); /* 字體文件路徑 */
-            font-display: swap; /* 保證字體加載時不會顯示為空白 */
+            font-family: 'ChenYuluoyan';
+            /* 設定字體名稱 */
+            src: url('./font/ChenYuluoyan-Thin.ttf') format('truetype');
+            /* 字體文件路徑 */
+            font-display: swap;
+            /* 保證字體加載時不會顯示為空白 */
         }
 
         body {
-            font-family: 'ChenYuluoyan', sans-serif !important; /* 強制使用自定義字體 */
+            font-family: 'ChenYuluoyan', sans-serif !important;
+            /* 強制使用自定義字體 */
         }
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="font-sans text-gray-800">
-    <!-- Header -->
-    <header class="bg-gray-100 shadow-md">
+    <!-- 首頁 -->
+    <header class="bg-lime-50" style="background-color: rgb(247 254 231 / var(--tw-bg-opacity, 1));">
         <nav class="max-w-7xl mx-auto flex items-center justify-between p-5">
-            <div class="text-xl font-bold" style="font-family: 'ChenYuluoyan', sans-serif; font-size: 40px;">劉懿賢個人檔案</div>
+            <div class="text-xl font-normal" style="font-family: 'ChenYuluoyan', sans-serif; font-size: 40px;">劉懿賢個人檔案
+            </div>
             <ul class="hidden md:flex space-x-6">
-                <li><a href="#about" class="hover:text-blue-500" style="font-family: 'ChenYuluoyan', sans-serif; font-size: 30px;">關於我</a></li>
-                <li><a href="#projects" class="hover:text-blue-500" style="font-family: 'ChenYuluoyan', sans-serif; font-size: 30px;">作品集</a></li>
-                <li><a href="#contact" class="hover:text-blue-500" style="font-family: 'ChenYuluoyan', sans-serif; font-size: 30px;">聯絡我</a></li>
+                <li><a href="#about" class="hover:text-green-500"
+                        style="font-family: 'ChenYuluoyan', sans-serif; font-size: 30px;">關於我</a></li>
+                <li><a href="#projects" class="hover:text-green-500"
+                        style="font-family: 'ChenYuluoyan', sans-serif; font-size: 30px;">作品集</a></li>
+                <li><a href="#contact" class="hover:text-green-500"
+                        style="font-family: 'ChenYuluoyan', sans-serif; font-size: 30px;">聯絡我</a></li>
             </ul>
         </nav>
         <div class="hidden" id="mobile-menu">
             <ul class="space-y-3 p-5 bg-gray-100">
-                <li><a href="#about" class="block text-blue-500">關於我</a></li>
-                <li><a href="#projects" class="block text-blue-500">作品集</a></li>
-                <li><a href="#contact" class="block text-blue-500">聯絡我</a></li>
+                <li><a href="#about" class="block text-green-500">關於我</a></li>
+                <li><a href="#projects" class="block text-green-500">作品集</a></li>
+                <li><a href="#contact" class="block text-green-500">聯絡我</a></li>
             </ul>
         </div>
     </header>
 
-    <!-- Hero Section with Video -->
-    <div class="relative h-[70vh]" style="background-image: url('./images/AA1wPc3f.jpg');">
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900 opacity-70"> </div>
+    <!-- 首頁上的文字 -->
+    <div class="relative h-[100vh]" style="background-image: url('./images/background\ photo.jpg')">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-800 opacity-70"> </div>
         <div class="absolute inset-0 flex flex-col items-center justify-center text-white z-10 space-y-4">
-            <h1 class="text-4xl md:text-6xl font-bold">哈囉！</h1>
-            <p class="text-xl">歡迎來到我的個人網頁</p>
-            <a href="#projects" class="bg-lime-400 text-white px-5 py-3 rounded hover:bg-lime-200">查看我的作品集</a>
-            
+            <h1 class="text-4xl md:text-6xl">哈囉！</h1>
+            <p class="text-xl" style="font-size: 30px;">歡迎來到我的個人網頁</p>
+            <a href="#projects" class="bg-green-500 text-white px-5 py-3 rounded hover:bg-lime-400">查看我的作品集</a>
+
         </div>
     </div>
 
-    <!-- About Section -->
-    <section id="about" class="max-w-7xl mx-auto px-5 py-10">
+    <!-- 關於我 -->
+    <section id="about" class="relative h-[50vh] max-w-7xl mx-auto px-5 py-10">
         <h2 class="text-3xl font-bold mb-5">關於我</h2>
         <div class="md:flex items-center space-x-10">
-            <p class="text-lg text-gray-600"> <img src="./images/photo1.jpg" alt="關於我" >
-            <p class="text-lg text-gray-600">
-                Hi, I'm Marri Rohan, a web developer. I specialize in web development and have a passion for creating innovative and efficient solutions. Let's collaborout Me" class="w-64 h-64 rounded-full object-cover mb-5 md:mb-0">ate and bring your ideas to life!
+            <p class="text-lg text-gray-600"> <img src="./images/photo1.jpg" alt="關於我">
+            <p class="text-lg text-gray-600">哈囉！我是來自桃園的劉懿賢，是一個守時與隨和的人。平常喜歡聽音樂、追劇、聽演唱會和收集明信片。
+
             </p>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="bg-gray-100 py-10">
+    <!--作品集 -->
+    <section id="projects" class="relative h-[40vh] bg-gray-100 py-10">
         <div class="max-w-7xl mx-auto px-5">
             <h2 class="text-3xl font-bold mb-5 text-center">Projects</h2>
             <div class="grid md:grid-cols-3 gap-6">
                 <!-- Project Card -->
                 <div class="bg-white shadow-md rounded-md p-5">
                     <h3 class="text-xl font-bold mb-3">E-commerce Website</h3>
-                    <p class="text-gray-600 mb-5">Developed a fully functional e-commerce website where users can browse products, add them to a cart, and make purchases.</p>
+                    <p class="text-gray-600 mb-5">Developed a fully functional e-commerce website where users can browse
+                        products, add them to a cart, and make purchases.</p>
                     <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Learn More</a>
                 </div>
                 <!-- Project Card -->
                 <div class="bg-white shadow-md rounded-md p-5">
                     <h3 class="text-xl font-bold mb-3">Social Media Dashboard</h3>
-                    <p class="text-gray-600 mb-5">Developed a social media dashboard that aggregates data from various social media platforms.</p>
+                    <p class="text-gray-600 mb-5">Developed a social media dashboard that aggregates data from various
+                        social media platforms.</p>
                     <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Learn More</a>
                 </div>
                 <!-- Project Card -->
                 <div class="bg-white shadow-md rounded-md p-5">
                     <h3 class="text-xl font-bold mb-3">Virtual Art Gallery</h3>
-                    <p class="text-gray-600 mb-5">Developed a virtual art gallery where artists can display their work. This project involved working with multimedia content and user interactions.</p>
+                    <p class="text-gray-600 mb-5">Developed a virtual art gallery where artists can display their work.
+                        This project involved working with multimedia content and user interactions.</p>
                     <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Learn More</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="max-w-7xl mx-auto px-5 py-10">
+    <!-- 聯絡我 -->
+    <section id="contact" class="relative h-[50vh] max-w-7xl mx-auto px-5 py-10">
         <h2 class="text-3xl font-bold mb-5">Contact Me</h2>
         <form class="space-y-5">
             <div>
                 <label for="name" class="block text-gray-700">Name</label>
-                <input type="text" id="name" class="w-full border-gray-300 rounded p-2 focus:ring-blue-500 focus:border-blue-500">
+                <input type="text" id="name"
+                    class="w-full border-gray-300 rounded p-2 focus:ring-blue-500 focus:border-blue-500">
             </div>
             <div>
                 <label for="email" class="block text-gray-700">Email</label>
-                <input type="email" id="email" class="w-full border-gray-300 rounded p-2 focus:ring-blue-500 focus:border-blue-500">
+                <input type="email" id="email"
+                    class="w-full border-gray-300 rounded p-2 focus:ring-blue-500 focus:border-blue-500">
             </div>
             <div>
                 <label for="message" class="block text-gray-700">Message</label>
-                <textarea id="message" class="w-full border-gray-300 rounded p-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                <textarea id="message"
+                    class="w-full border-gray-300 rounded p-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
             </div>
-            <button type="submit" class="bg-blue-500 text-white px-5 py-2 rounded hover:bg-blue-600">Send Message</button>
+            <button type="submit" class="bg-blue-500 text-white px-5 py-2 rounded hover:bg-blue-600">Send
+                Message</button>
         </form>
     </section>
 
-    <!-- Footer -->
+    <!-- 頁尾 -->
     <footer class="bg-gray-800 text-white py-5">
         <div class="max-w-7xl mx-auto px-5 text-center">
-            <p>&copy;2025 劉懿賢個人網站 | 保留所有權利</p>
+            <p style="font-size: 20px;">&copy;2025 劉懿賢個人網站 | 保留所有權利</p>
             <div class="space-x-3 mt-3">
-                <a href="#" class="text-blue-400">LinkedIn</a>
-                <a href="#" class="text-blue-400">GitHub</a>
-                <a href="#" class="text-blue-400">Twitter</a>
+                <a href="https://www.linkedin.com/in/yi-hsien-liu-a557972a2?trk=contact-info" class="text-blue-400"
+                    style="font-size: 30px;">LinkedIn</a>
+                <a href="https://www.instagram.com/yihsien88?igsh=MTgwdWVqcGI5Mmxl" class="text-blue-400"
+                    style="font-size: 30px;">Instagram</a>
+                <a href="mailto:k1564ann@gmail.com" class="text-blue-400" style="font-size: 30px;">與我聯絡</a>
             </div>
         </div>
     </footer>
@@ -127,5 +146,5 @@
         });
     </script>
 </body>
+
 </html>
-  
