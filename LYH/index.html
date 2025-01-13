@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>劉懿賢個人檔案</title>
+    <title>劉懿賢個人網站</title>
     <style>
         /* 使用自定義字體 */
         @font-face {
@@ -28,7 +28,7 @@
     <!-- 首頁 -->
     <header class="bg-lime-50" style="background-color: rgb(247 254 231 / var(--tw-bg-opacity, 1));">
         <nav class="max-w-7xl mx-auto flex items-center justify-between p-5">
-            <div class="text-xl font-normal" style="font-family: 'ChenYuluoyan', sans-serif; font-size: 40px;">劉懿賢個人檔案
+            <div class="text-xl font-normal" style="font-family: 'ChenYuluoyan', sans-serif; font-size: 50px;">劉懿賢個人網站
             </div>
             <ul class="hidden md:flex space-x-6">
                 <li><a href="#about" class="hover:text-green-500"
@@ -49,91 +49,183 @@
     </header>
 
     <!-- 首頁上的文字 -->
-    <div class="relative h-[100vh]" style="background-image: url('./images/background\ photo.jpg')">
+    <div class="relative h-[70vh]" style="background-image: url('./images/background\ photo2.jpg')">
         <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-800 opacity-70"> </div>
         <div class="absolute inset-0 flex flex-col items-center justify-center text-white z-10 space-y-4">
             <h1 class="text-4xl md:text-6xl">哈囉！</h1>
-            <p class="text-xl" style="font-size: 30px;">歡迎來到我的個人網頁</p>
+            <p class="text-xl" style="font-size: 30px;">歡迎來到劉懿賢的個人網頁</p>
             <a href="#projects" class="bg-green-500 text-white px-5 py-3 rounded hover:bg-lime-400">查看我的作品集</a>
 
         </div>
     </div>
 
     <!-- 關於我 -->
-    <section id="about" class="relative h-[50vh] max-w-7xl mx-auto px-5 py-10">
-        <h2 class="text-3xl font-bold mb-5">關於我</h2>
+    <section id="about" class="relative h-[130vh] max-w-7xl mx-auto px-5 py-10">
+        <h2 class="text-3xl font-bold mb-5" style="font-size: 50px;">關於我</h2>
         <div class="md:flex items-center space-x-10">
-            <p class="text-lg text-gray-600"> <img src="./images/photo1.jpg" alt="關於我">
-            <p class="text-lg text-gray-600">哈囉！我是來自桃園的劉懿賢，是一個守時與隨和的人。平常喜歡聽音樂、追劇、聽演唱會和收集明信片。
-
+            <p class="text-lg text-gray-600"> <img src="./images/photo1.jpg" alt="關於我"
+                    class="w-100 h-70 object-cover mb-5 md:mb-0">
+            <p class="text-lg text-gray-600 text-base/7" style="font-size: 30px;">
+                哈囉！我是來自桃園的劉懿賢，一個守時與隨和的人。平常喜歡追劇、聽音樂、聽演唱會和收集明信片。<br><br>擁有跨領域背景，國立臺北商業大學應用外語科五專部畢業後，
+                插大到輔仁大學統計資訊學系就讀。<br><br>從2024年10月至2025年01月參加勞動部產業新尖兵「互動式前端網頁設計與開發實務班（第7梯次）」，學會使用Figma進行UI/UX設計和前端程式（HTML、CSS、JavaScript）。
             </p>
         </div>
+
+        <!-- 水平時間軸 -->
+        <div class="timeline mt-10">
+            <h3 class="text-2xl font-semibold mb-4">我的成長時間軸</h3>
+            <div class="flex justify-start items-center space-x-12">
+                <div class="flex items-center">
+                    <div class="h-8 w-8 bg-blue-500 rounded-full flex items-center justify-center text-white">
+                        <span>1</span>
+                    </div>
+                    <div class="ml-4 text-lg text-gray-700">
+                        <h4 class="font-semibold">2024年10月 - 開始學習前端開發</h4>
+                        <p>參加勞動部產業新尖兵「互動式前端網頁設計與開發實務班（第7梯次）」，開始學習HTML、CSS和JavaScript。</p>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <div class="h-8 w-8 bg-blue-500 rounded-full flex items-center justify-center text-white">
+                        <span>2</span>
+                    </div>
+                    <div class="ml-4 text-lg text-gray-700">
+                        <h4 class="font-semibold">2024年9月 - 輔仁大學統計資訊學系就讀</h4>
+                        <p>順利進入輔仁大學統計資訊學系，開始深入學習統計與程式設計相關課程。</p>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <div class="h-8 w-8 bg-blue-500 rounded-full flex items-center justify-center text-white">
+                        <span>3</span>
+                    </div>
+                    <div class="ml-4 text-lg text-gray-700">
+                        <h4 class="font-semibold">2022年 - 畢業於國立臺北商業大學應用外語科五專部</h4>
+                        <p>完成五專課程，並獲得應用外語科的學位，為後來的統計與資訊學習奠定基礎。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 水平時間軸的 CSS -->
+    <style>
+        /* 水平時間軸的樣式 */
+        .timeline .flex {
+            display: flex;
+            justify-content: start;
+            /* 左對齊 */
+            align-items: center;
+        }
+
+        .timeline .space-x-12 {
+            gap: 3rem;
+            /* 時間點間隔 */
+        }
+
+        .timeline .h-8 {
+            height: 2rem;
+            /* 調整圓圈的大小 */
+        }
+
+        .timeline .w-8 {
+            width: 2rem;
+            /* 調整圓圈的大小 */
+        }
+
+        .timeline .ml-4 {
+            margin-left: 1rem;
+            /* 調整文字和圓圈的間距 */
+        }
+
+        .timeline .text-gray-700 {
+            color: #4a4a4a;
+        }
+
+        .timeline .font-semibold {
+            font-weight: 600;
+        }
+
+        .timeline .bg-blue-500 {
+            background-color: greenyellow;
+        }
+
+        .timeline .rounded-full {
+            border-radius: 9999px;
+        }
+
+        .timeline .text-white {
+            color: #222222;
+        }
+    </style>
     </section>
 
     <!--作品集 -->
     <section id="projects" class="relative h-[40vh] bg-gray-100 py-10">
         <div class="max-w-7xl mx-auto px-5">
-            <h2 class="text-3xl font-bold mb-5 text-center">Projects</h2>
+            <h2 class="text-3xl font-bold mb-5" style="font-size: 50px;">作品集</h2>
             <div class="grid md:grid-cols-3 gap-6">
                 <!-- Project Card -->
                 <div class="bg-white shadow-md rounded-md p-5">
-                    <h3 class="text-xl font-bold mb-3">E-commerce Website</h3>
-                    <p class="text-gray-600 mb-5">Developed a fully functional e-commerce website where users can browse
-                        products, add them to a cart, and make purchases.</p>
-                    <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Learn More</a>
+                    <h3 class="text-xl font-bold mb-3">手機App UI/UX交互作品</h3>
+                    <p class="text-gray-600 mb-5">「好運來，票券輕鬆買」，希望使用此app的使用者都能順利買到票進場享受音樂盛宴。</p>
+                    <a href="https://www.figma.com/proto/ztPtoRjPq4miTCBZP0IwYZ/UI%E4%BA%A4%E4%BA%92%E4%BD%9C%E5%93%81-%E4%B8%8A%E4%B8%8A%E7%B1%A4-19%E5%8A%89%E6%87%BF%E8%B3%A2?page-id=0%3A1&node-id=129-323&viewport=-227%2C334%2C0.05&t=Jv6uIN5uqLJtOFl0-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=124%3A246"
+                        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">UI交互</a>
+                    <a href="https://www.figma.com/deck/QsKU2VXYvcXMnNHpi4vpgs/%E6%88%90%E6%9E%9C%E7%B0%A1%E5%A0%B1-19%E5%8A%89%E6%87%BF%E8%B3%A2?node-id=1-541&viewport=-23114%2C-51%2C0.46&t=MkqIOsibLLc30W9S-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1"
+                        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">UI簡報內容</a>
                 </div>
                 <!-- Project Card -->
                 <div class="bg-white shadow-md rounded-md p-5">
                     <h3 class="text-xl font-bold mb-3">Social Media Dashboard</h3>
                     <p class="text-gray-600 mb-5">Developed a social media dashboard that aggregates data from various
                         social media platforms.</p>
-                    <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Learn More</a>
+                    <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">了解更多</a>
                 </div>
                 <!-- Project Card -->
                 <div class="bg-white shadow-md rounded-md p-5">
                     <h3 class="text-xl font-bold mb-3">Virtual Art Gallery</h3>
                     <p class="text-gray-600 mb-5">Developed a virtual art gallery where artists can display their work.
                         This project involved working with multimedia content and user interactions.</p>
-                    <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Learn More</a>
+                    <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">了解更多</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 聯絡我 -->
-    <section id="contact" class="relative h-[50vh] max-w-7xl mx-auto px-5 py-10">
-        <h2 class="text-3xl font-bold mb-5">Contact Me</h2>
-        <form class="space-y-5">
+    <section id="contact" class="relative h-[70vh] max-w-7xl mx-auto px-5 py-10">
+        <h2 class="text-3xl font-bold mb-5" style="font-size: 50px;">聯絡我</h2>
+        <form action="https://formspree.io/f/mqaandzk" method="POST" class="space-y-5">
             <div>
-                <label for="name" class="block text-gray-700">Name</label>
-                <input type="text" id="name"
-                    class="w-full border-gray-300 rounded p-2 focus:ring-blue-500 focus:border-blue-500">
+                <label for="name" class="block text-gray-700">姓名</label>
+                <input type="text" id="name" name="name"
+                    class="w-full border-2 border-green-500 rounded p-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    required>
             </div>
             <div>
                 <label for="email" class="block text-gray-700">Email</label>
-                <input type="email" id="email"
-                    class="w-full border-gray-300 rounded p-2 focus:ring-blue-500 focus:border-blue-500">
+                <input type="email" id="email" name="email"
+                    class="w-full border-2 border-green-500 rounded p-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    required>
             </div>
             <div>
-                <label for="message" class="block text-gray-700">Message</label>
-                <textarea id="message"
-                    class="w-full border-gray-300 rounded p-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                <label for="message" class="block text-gray-700">留言訊息</label>
+                <textarea id="message" name="message"
+                    class="w-full border-2 border-green-500 rounded p-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    required></textarea>
             </div>
-            <button type="submit" class="bg-blue-500 text-white px-5 py-2 rounded hover:bg-blue-600">Send
-                Message</button>
+            <button type="submit" class="bg-blue-500 text-white px-5 py-2 rounded hover:bg-blue-600">傳送訊息</button>
         </form>
     </section>
 
     <!-- 頁尾 -->
     <footer class="bg-gray-800 text-white py-5">
         <div class="max-w-7xl mx-auto px-5 text-center">
-            <p style="font-size: 20px;">&copy;2025 劉懿賢個人網站 | 保留所有權利</p>
+            <p style="font-size: 20px;">&copy;2025 劉懿賢個人網站 | 歡迎透過底下幾種方式與我聯絡喔</p>
             <div class="space-x-3 mt-3">
                 <a href="https://www.linkedin.com/in/yi-hsien-liu-a557972a2?trk=contact-info" class="text-blue-400"
                     style="font-size: 30px;">LinkedIn</a>
                 <a href="https://www.instagram.com/yihsien88?igsh=MTgwdWVqcGI5Mmxl" class="text-blue-400"
                     style="font-size: 30px;">Instagram</a>
-                <a href="mailto:k1564ann@gmail.com" class="text-blue-400" style="font-size: 30px;">與我聯絡</a>
+                <a href="mailto:k1564ann@gmail.com" class="text-blue-400" style="font-size: 30px;">Email</a>
             </div>
         </div>
     </footer>
