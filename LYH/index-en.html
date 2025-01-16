@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LYH's website</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Mansalva&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Playwrite+HR+Lijeva:wght@100..400&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap" rel="stylesheet">
+
     <!-- Logo -->
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
@@ -24,7 +23,7 @@
 
 
         body {
-            font-family: 'Mansalva', sans-serif !important;
+            font-family: 'Playwrite Australia SA', sans-serif !important;
             /* 強制使用自定義字體 */
         }
 
@@ -65,22 +64,36 @@
                         <option class="text-lg text-green-500 px-3 py-2 rounded" value="index-cn.html">简体中文</option>
                         <option class="text-lg text-green-500 px-3 py-2 rounded" value="index.html">繁體中文</option>
                         <option class="text-lg text-green-500 px-3 py-2 rounded" value="index-kr.html">한국어</option>
-
                     </select>
                 </li>
             </ul>
+            <!-- 手機版漢堡按鈕 -->
+            <div class="md:hidden flex items-center" id="menu-button">
+                <button class="text-3xl">☰</button>
+            </div>
         </nav>
         <div class="hidden" id="mobile-menu">
             <ul class="space-y-3 p-5 bg-gray-100">
                 <li><a href="#about" class="block text-green-500">About</a></li>
+                <li><a href="#education" class="block text-green-500">Education</a></li>
                 <li><a href="#projects" class="block text-green-500">Portfolio</a></li>
                 <li><a href="#contact" class="block text-green-500">Contact</a></li>
+                <!-- 語言切換 -->
+                <li>
+                    <select id="language-selector-mobile" class="bg-lime-300 p-2 rounded text-sm"
+                        onchange="location.href = this.value;">
+                        <option class="text-lg text-green-500 px-3 py-2 rounded" value="index.html">繁體中文</option>
+                        <option class="text-lg text-green-500 px-3 py-2 rounded" value="index-cn.html">简体中文</option>
+                        <option class="text-lg text-green-500 px-3 py-2 rounded" value="index-en.html">English</option>
+                        <option class="text-lg text-green-500 px-3 py-2 rounded" value="index-kr.html">한국어</option>
+                    </select>
+                </li>
             </ul>
         </div>
     </header>
 
     <!-- 首頁上的文字 -->
-    <div class="relative h-[100vh]" style="background-image: url('./images/background\ photo2.jpg')">
+    <div class="relative min-h-[100vh]" style="background-image: url('./images/background\ photo2.jpg')">
         <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-800 opacity-70"> </div>
         <div class="absolute inset-0 flex flex-col items-center justify-center text-white z-10 space-y-4">
             <h1 class="text-4xl md:text-6xl">Hi!</h1>
@@ -92,13 +105,14 @@
     </div>
 
     <!-- 關於我 -->
-    <section id="about" class="relative h-[60vh] max-w-7xl mx-auto px-5 py-10">
+    <section id="about" class=" max-w-7xl mx-auto px-5 py-10">
         <h2 class="text-5xl font-bold mb-5">About</h2>
         <div class="md:flex items-center space-x-10">
             <p class="text-lg text-gray-600"> <img src="./images/photo1.jpg" alt="關於我"
                     class="w-100 h-70 object-cover mb-5 md:mb-0">
             <p class="text-xl text-gray-600 text-base/7">
-                Hello! I'm Liu, Yi-Hsien from Taoyuan, Taiwan, a punctual and easy-going person. In my free time, I enjoy
+                Hello! I'm Liu, Yi-Hsien from Taoyuan, Taiwan, a punctual and easy-going person. In my free time, I
+                enjoy
                 watching dramas, listening to music, attending concerts, and collecting postcards.
                 <br><br>I have a multidisciplinary background. After graduating from the Applied Foreign Languages
                 Department of National Taipei University of Business, I continued my studies in the Department of
@@ -114,7 +128,7 @@
     </section>
 
     <!-- 學歷 -->
-    <section id="education" class="relative h-[45vh] bg-cyan-50 py-10">
+    <section id="education" class=" bg-cyan-50 py-10">
         <div class="max-w-7xl mx-auto px-5">
             <h2 class="text-5xl font-bold mb-5">Education</h2>
             <div class="grid md:grid-cols-3 gap-6">
@@ -149,7 +163,7 @@
     </section>
 
     <!--作品集 done -->
-    <section id="projects" class="relative h-[40vh] bg-lime-100 py-10">
+    <section id="projects" class=" bg-lime-100 py-10">
         <div class="max-w-7xl mx-auto px-5">
             <h2 class="text-5xl font-bold mb-5">Portfolio</h2>
             <div class="grid md:grid-cols-3 gap-6">
@@ -187,7 +201,7 @@
     </section>
 
     <!-- 聯絡我 字體大小還沒改 -->
-    <section id="contact" class="relative h-[50vh] max-w-7xl mx-auto px-5 py-10">
+    <section id="contact" class="max-w-7xl mx-auto px-5 py-10">
         <h2 class="text-5xl font-bold mb-5">Contact</h2>
         <form action="https://formspree.io/f/mqaandzk" method="POST" class="space-y-5">
             <div>

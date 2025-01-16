@@ -69,25 +69,40 @@
                     <select id="language-selector" class="bg-lime-300 p-2 rounded text-sm"
                         onchange="location.href = this.value;">
                         <option class="text-lg text-green-500 px-3 py-2 rounded" value="index-cn.html">简体中文</option>
-                        <option class="text-lg text-green-500 px-3 py-2 rounded" value="index.html">繁體中文</option>  
+                        <option class="text-lg text-green-500 px-3 py-2 rounded" value="index.html">繁體中文</option>
                         <option class="text-lg text-green-500 px-3 py-2 rounded" value="index-en.html">English</option>
                         <option class="text-lg text-green-500 px-3 py-2 rounded" value="index-kr.html">한국어</option>
-                      
                     </select>
                 </li>
             </ul>
+            <!-- 手機版漢堡按鈕 -->
+            <div class="md:hidden flex items-center" id="menu-button">
+                <button class="text-3xl">☰</button>
+            </div>
         </nav>
-        <div class="hidden" id="mobile-menu">
+
+        <div class="hidden md:hidden" id="mobile-menu">
             <ul class="space-y-3 p-5 bg-gray-100">
                 <li><a href="#about" class="block text-green-500">关于我</a></li>
+                <li><a href="#education" class="block text-green-500">学历</a></li>
                 <li><a href="#projects" class="block text-green-500">作品集</a></li>
                 <li><a href="#contact" class="block text-green-500">联系我</a></li>
+                <!-- 語言切換 -->
+                <li>
+                    <select id="language-selector-mobile" class="bg-lime-300 p-2 rounded text-sm"
+                        onchange="location.href = this.value;">
+                        <option class="text-lg text-green-500 px-3 py-2 rounded" value="index-cn.html">简体中文</option>
+                        <option class="text-lg text-green-500 px-3 py-2 rounded" value="index.html">繁體中文</option>
+                        <option class="text-lg text-green-500 px-3 py-2 rounded" value="index-en.html">English</option>
+                        <option class="text-lg text-green-500 px-3 py-2 rounded" value="index-kr.html">한국어</option>
+                    </select>
+                </li>
             </ul>
         </div>
     </header>
 
-    <!-- 首頁上的文字 -->
-    <div class="relative h-[100vh]" style="background-image: url('./images/background\ photo2.jpg')">
+    <!-- 首頁 -->
+    <div class="relative min-h-[100vh]" style="background-image: url('./images/background\ photo2.jpg')">
         <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-800 opacity-70"> </div>
         <div class="absolute inset-0 flex flex-col items-center justify-center text-white z-10 space-y-4">
             <h1 class="text-4xl md:text-6xl">哈喽！</h1>
@@ -98,7 +113,7 @@
     </div>
 
     <!-- 關於我 -->
-    <section id="about" class="relative h-[60vh] max-w-7xl mx-auto px-5 py-10">
+    <section id="about" class="max-w-7xl mx-auto px-5 py-10">
         <h2 class="text-5xl font-bold mb-5">关于我</h2>
         <div class="md:flex items-center space-x-10">
             <p class="text-lg text-gray-600"> <img src="./images/photo1.jpg" alt="關於我"
@@ -112,7 +127,7 @@
     </section>
 
     <!-- 學歷 -->
-    <section id="education" class="relative h-[45vh] bg-cyan-50 py-10">
+    <section id="education" class="bg-cyan-50 py-10">
         <div class="max-w-7xl mx-auto px-5">
             <h2 class="text-5xl font-bold mb-5">学历</h2>
             <div class="grid md:grid-cols-3 gap-6">
@@ -145,7 +160,7 @@
     </section>
 
     <!--作品集 done -->
-    <section id="projects" class="relative h-[40vh] bg-lime-100 py-10">
+    <section id="projects" class="bg-lime-100 py-10">
         <div class="max-w-7xl mx-auto px-5">
             <h2 class="text-5xl font-bold mb-5">作品集</h2>
             <div class="grid md:grid-cols-3 gap-6">
@@ -183,7 +198,7 @@
     </section>
 
     <!-- 聯絡我 字體大小還沒改 -->
-    <section id="contact" class="relative h-[50vh] max-w-7xl mx-auto px-5 py-10">
+    <section id="contact" class="max-w-7xl mx-auto px-5 py-10">
         <h2 class="text-5xl font-bold mb-5">联系我</h2>
         <form action="https://formspree.io/f/mqaandzk" method="POST" class="space-y-5">
             <div>
@@ -227,9 +242,11 @@
     </footer>
 
     <script>
+        //監聽漢堡按鈕，顯示/隱藏手機版菜單
         const menuButton = document.getElementById('menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         menuButton.addEventListener('click', () => {
+            //切換顯示/隱藏菜單
             mobileMenu.classList.toggle('hidden');
         });
     </script>

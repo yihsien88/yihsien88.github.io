@@ -65,28 +65,43 @@
                         style="font-family: 'ChenYuluoyan', sans-serif; ">聯絡我</a></li>
                 <!-- 語言切換下拉選單 -->
                 <li>
-                    <select id="language-selector" class="bg-lime-300 p-2 rounded text-sm"
+                    <select id="language-selector" class="bg-lime-300 p-2 rounded text-sm max-w-xs"
                         onchange="location.href = this.value;">
                         <option class="text-lg text-green-500 px-3 py-2 rounded" value="index.html">繁體中文</option>
                         <option class="text-lg text-green-500 px-3 py-2 rounded" value="index-cn.html">简体中文</option>
                         <option class="text-lg text-green-500 px-3 py-2 rounded" value="index-en.html">English</option>
                         <option class="text-lg text-green-500 px-3 py-2 rounded" value="index-kr.html">한국어</option>
-
                     </select>
                 </li>
             </ul>
+            <!-- 手機版漢堡按鈕 -->
+            <div class="md:hidden flex items-center" id="menu-button">
+                <button class="text-3xl">☰</button>
+            </div>
         </nav>
-        <div class="hidden" id="mobile-menu">
+
+        <div class="hidden md:hidden" id="mobile-menu">
             <ul class="space-y-3 p-5 bg-gray-100">
                 <li><a href="#about" class="block text-green-500">關於我</a></li>
+                <li><a href="#education" class="block text-green-500">學歷</a></li>
                 <li><a href="#projects" class="block text-green-500">作品集</a></li>
                 <li><a href="#contact" class="block text-green-500">聯絡我</a></li>
+                <!-- 語言切換 -->
+                <li>
+                    <select id="language-selector-mobile" class="bg-lime-300 p-2 rounded text-sm"
+                        onchange="location.href = this.value;">
+                        <option class="text-lg text-green-500 px-3 py-2 rounded" value="index.html">繁體中文</option>
+                        <option class="text-lg text-green-500 px-3 py-2 rounded" value="index-cn.html">简体中文</option>
+                        <option class="text-lg text-green-500 px-3 py-2 rounded" value="index-en.html">English</option>
+                        <option class="text-lg text-green-500 px-3 py-2 rounded" value="index-kr.html">한국어</option>
+                    </select>
+                </li>
             </ul>
         </div>
     </header>
 
-    <!-- 首頁上的文字 -->
-    <div class="relative h-[100vh]" style="background-image: url('./images/background\ photo2.jpg')">
+    <!-- 首頁 -->
+    <div class="relative min-h-[100vh]" style="background-image: url('./images/background\ photo2.jpg')">
         <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-800 opacity-70"> </div>
         <div class="absolute inset-0 flex flex-col items-center justify-center text-white z-10 space-y-4">
             <h1 class="text-4xl md:text-6xl">哈囉！</h1>
@@ -97,11 +112,11 @@
     </div>
 
     <!-- 關於我 -->
-    <section id="about" class="relative h-[60vh] max-w-7xl mx-auto px-5 py-10">
+    <section id="about" class="max-w-7xl mx-auto px-5 py-10">
         <h2 class="text-5xl font-bold mb-5">關於我</h2>
-        <div class="md:flex items-center space-x-10">
+        <div class="flex flex-col md:flex-row items-center space-x-10">
             <p class="text-lg text-gray-600"> <img src="./images/photo1.jpg" alt="關於我"
-                    class="w-100 h-70 object-cover mb-5 md:mb-0">
+                    class="w-full h-auto rounded-3xl object-cover mb-5 md:mb-0">
             <p class="text-xl text-gray-600 text-base/7">
                 哈囉！我是來自桃園的劉懿賢，一個守時與隨和的人。平常喜歡追劇、聽音樂、聽演唱會和收集明信片。<br><br>擁有跨領域背景，國立臺北商業大學應用外語科五專部畢業後，
                 插大到輔仁大學統計資訊學系就讀。目前考有TOEIC 845分和TOPIK 五級等兩張外文證照，Google Analytics分析等一張分析證照，這些成就證明
@@ -111,7 +126,7 @@
     </section>
 
     <!-- 學歷 -->
-    <section id="education" class="relative h-[45vh] bg-cyan-50 py-10">
+    <section id="education" class="bg-cyan-50 py-10">
         <div class="max-w-7xl mx-auto px-5">
             <h2 class="text-5xl font-bold mb-5">學歷</h2>
             <div class="grid md:grid-cols-3 gap-6">
@@ -143,12 +158,12 @@
         </div>
     </section>
 
-    <!--作品集 done -->
-    <section id="projects" class="relative h-[40vh] bg-lime-100 py-10">
+    <!--作品集 -->
+    <section id="projects" class="bg-lime-100 py-10">
         <div class="max-w-7xl mx-auto px-5">
             <h2 class="text-5xl font-bold mb-5">作品集</h2>
             <div class="grid md:grid-cols-3 gap-6">
-                <!-- Project Card -->
+                <!-- 職訓 -->
                 <div class="bg-white shadow-md rounded-md p-5">
                     <h3 class="text-3xl font-bold mb-3">互動式前端網頁設計與開發實務班——手機App UI/UX交互作品</h3>
                     <p class="text-gray-600 mb-5">上上籤——「好運來，票券輕鬆買」，希望使用此app的使用者都能順利買到票進場享受音樂盛宴。</p>
@@ -159,7 +174,7 @@
                             class="bg-green-500 text-white px-2 py-2 rounded hover:bg-lime-400">UI簡報內容</a>
                     </div>
                 </div>
-                <!-- Project Card -->
+                <!-- 校務研究室 -->
                 <div class="bg-white shadow-md rounded-md p-5">
                     <h3 class="text-3xl font-bold mb-3">輔仁大學高教深耕計畫獲獎之起飛學生分析檔案</h3>
                     <p class="text-gray-600 mb-5">使用Excel進行資料預處理，再將其導入SPSS進行敘述統計、信效度分析、T檢定、IPA分析。</p>
@@ -168,7 +183,7 @@
                             class="bg-green-500 text-white px-4 py-2 rounded hover:bg-lime-400">分析結果</a>
                     </div>
                 </div>
-                <!-- Project Card -->
+                <!--資料採礦 -->
                 <div class="bg-white shadow-md rounded-md p-5">
                     <h3 class="text-3xl font-bold mb-3">輔仁大學資料採曠課期末團體報告分析</h3>
                     <p class="text-gray-600 mb-5">分別使用SPSS和RStudio的關聯法則分析政府公開資料集「101年-臺北市A1及A2類交通事故明細」</p>
@@ -181,8 +196,8 @@
         </div>
     </section>
 
-    <!-- 聯絡我 字體大小還沒改 -->
-    <section id="contact" class="relative h-[50vh] max-w-7xl mx-auto px-5 py-10">
+    <!-- 聯絡我 -->
+    <section id="contact" class="max-w-7xl mx-auto px-5 py-10">
         <h2 class="text-5xl font-bold mb-5">聯絡我</h2>
         <form action="https://formspree.io/f/mqaandzk" method="POST" class="space-y-5">
             <div>
@@ -226,12 +241,14 @@
     </footer>
 
     <script>
+        //監聽漢堡按鈕，顯示/隱藏手機版菜單
         const menuButton = document.getElementById('menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         menuButton.addEventListener('click', () => {
+            //切換顯示/隱藏菜單
             mobileMenu.classList.toggle('hidden');
         });
     </script>
 </body>
-
+    
 </html>
