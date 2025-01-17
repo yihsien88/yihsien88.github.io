@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리우's 개인 웹사이트</title>
+    <link href="#">
+
+
+    <!-- Logo -->
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+    <style>
+        /* 使用自定義字體 */
+        @font-face {
+            font-family: 'ChenYuluoyan';
+            /* 設定字體名稱 */
+            src: url('./font/ChenYuluoyan-Thin.ttf') format('truetype');
+            /* 字體文件路徑 */
+            font-display: swap;
+            /* 保證字體加載時不會顯示為空白 */
+        }
+
+        @font-face {
+            font-family: 'Noto Sans TC';
+            /* 設定字體名稱 */
+            src: url('./font/Noto_Sans_TC/static/NotoSansTC-Medium.ttf') format('truetype');
+            /* 字體文件路徑 */
+            font-display: swap;
+            /* 保證字體加載時不會顯示為空白 */
+        }
+
+
+        body {
+            font-family: 'ChenYuluoyan', sans-serif !important;
+            /* 強制使用自定義字體 */
+        }
+
+        nav,
+        p,
+        a,
+        label,
+        button {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-sans text-gray-800">
+    <!-- 首頁 -->
+    <header class="bg-lime-50" style="background-color: rgb(247 254 231 / var(--tw-bg-opacity, 1));">
+        <nav class="max-w-7xl mx-auto flex items-center justify-between p-5">
+            <div class="flex items-center">
+                <!-- 圖示 -->
+                <img src="./images/logo-no-background.svg" alt="icon" class="w-50 h-20 ">
+            </div>
+            <ul class="hidden md:flex space-x-6 text-3xl">
+                <li><a href="#about" class="hover:text-green-500"
+                        style="font-family: 'ChenYuluoyan', sans-serif;">자기소개</a></li>
+                <li><a href="#education" class="hover:text-green-500"
+                        style="font-family: 'ChenYuluoyan', sans-serif;">학력</a></li>
+                <li><a href="#projects" class="hover:text-green-500"
+                        style="font-family: 'ChenYuluoyan', sans-serif;">프로젝트</a></li>
+                <li><a href="#contact" class="hover:text-green-500"
+                        style="font-family: 'ChenYuluoyan', sans-serif; ">연락처</a></li>
+                <!-- 語言切換下拉選單 -->
+                <li>
+                    <select id="language-selector" class="bg-lime-300 p-2 rounded text-sm max-w-xs"
+                        onchange="location.href = this.value;">
+                        <option class="text-lg text-green-500 px-3 py-2 rounded" value="index-kr.html">한국어</option>
+                        <option class="text-lg text-green-500 px-3 py-2 rounded" value="index.html">繁體中文</option>
+                        <option class="text-lg text-green-500 px-3 py-2 rounded" value="index-cn.html">简体中文</option>
+                        <option class="text-lg text-green-500 px-3 py-2 rounded" value="index-en.html">English</option>
+
+                    </select>
+                </li>
+            </ul>
+            <!-- 手機版漢堡按鈕 -->
+            <div class="md:hidden flex items-center" id="menu-button">
+                <button class="text-3xl">☰</button>
+            </div>
+        </nav>
+
+        <div class="hidden md:hidden" id="mobile-menu">
+            <ul class="space-y-3 p-5 bg-gray-100">
+                <li><a href="#about" class="block text-green-500">자기소개</a></li>
+                <li><a href="#education" class="block text-green-500">학력</a></li>
+                <li><a href="#projects" class="block text-green-500">프로젝트</a></li>
+                <li><a href="#contact" class="block text-green-500">연락처</a></li>
+                <!-- 語言切換 -->
+                <li>
+                    <select id="language-selector-mobile" class="bg-lime-300 p-2 rounded text-sm"
+                        onchange="location.href = this.value;">
+                        <option class="text-lg text-green-500 px-3 py-2 rounded" value="index.html">繁體中文</option>
+                        <option class="text-lg text-green-500 px-3 py-2 rounded" value="index-cn.html">简体中文</option>
+                        <option class="text-lg text-green-500 px-3 py-2 rounded" value="index-en.html">English</option>
+                        <option class="text-lg text-green-500 px-3 py-2 rounded" value="index-kr.html">한국어</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- 首頁 -->
+    <div class="relative min-h-[100vh]" style="background-image: url('./images/background\ photo2.jpg')">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-800 opacity-70"> </div>
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-white z-10 space-y-4">
+            <h1 class="text-4xl md:text-6xl">안녕하세요!!!</h1>
+            <h1 class="text-3xl"></h1>
+            <a href="#projects" class="bg-green-500 text-white px-5 py-3 rounded hover:bg-lime-400">제 프로젝트 보기</a>
+
+        </div>
+    </div>
+
+    <!-- 關於我 -->
+    <section id="about" class="max-w-7xl mx-auto px-5 py-10">
+        <h2 class="text-5xl font-bold mb-5">자기소개</h2>
+        <div class="flex flex-col md:flex-row items-center space-x-10">
+            <p class="text-lg text-gray-600"> <img src="./images/photo1.jpg" alt="關於我"
+                    class="w-full h-auto rounded-3xl object-cover mb-5 md:mb-0">
+            <p class="text-xl text-gray-600 text-base/7">
+                哈囉！我是來自桃園的劉懿賢，一個守時與隨和的人。平常喜歡追劇、聽音樂、聽演唱會和收集明信片。<br><br>擁有跨領域背景，國立臺北商業大學應用外語科五專部畢業後，
+                插大到輔仁大學統計資訊學系就讀。目前考有TOEIC 845分和TOPIK 五級等兩張外文證照，Google Analytics分析等一張分析證照，這些成就證明
+                我在外語和統計方面的努力與成果。<br><br>從2024年10月至2025年01月參加勞動部產業新尖兵「互動式前端網頁設計與開發實務班（第7梯次）」，學會使用Figma進行UI/UX設計和前端程式（HTML、CSS、JavaScript）。
+            </p>
+        </div>
+    </section>
+
+    <!-- 學歷 -->
+    <section id="education" class="bg-cyan-50 py-10">
+        <div class="max-w-7xl mx-auto px-5">
+            <h2 class="text-5xl font-bold mb-5">학력</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- FJU SIS -->
+                <div class="bg-white shadow-md rounded-md p-5">
+                    <h3 class="text-3xl font-bold mb-3">2021년2월-2023년6월</h3>
+                    <p class="text-gray-600 mb-5">통계학과 학사 - Fu Jen Catholic University, Taipei City, Taiwan (R.O.C)</p>
+                    <img src="./images/FJU.jpg" alt="">
+                    <div class="flex justify-evenly">
+                        <a href="https://www.fju.edu.tw/"
+                            class="bg-green-500 text-white px-4 py-2 rounded hover:bg-lime-400">학교 웹사이트</a>
+                        <a href="http://www.stat.fju.edu.tw/"
+                            class="bg-green-500 text-white px-4 py-2 rounded hover:bg-lime-400">학과 웹사이트</a>
+                    </div>
+                </div>
+                <!-- NTUB AFL -->
+                <div class="bg-white shadow-md rounded-md p-5">
+                    <h3 class="text-3xl font-bold mb-3">2015년9월-2020년6월
+                    </h3>
+                    <p class="text-gray-600 mb-5">응용외국어학과 부학사 - National Taipei University of Business, Taipei City, Taiwan (R.O.C)</p>
+                    <img src="./images/NTUB.png" alt="" class="mb-4">
+                    <div class="flex justify-evenly">
+                        <a href="https://www.ntub.edu.tw/"
+                            class="bg-green-500 text-white px-4 py-2 rounded hover:bg-lime-400">학교 웹사이트</a>
+                        <a href="https://afl.ntub.edu.tw/"
+                            class="bg-green-500 text-white px-4 py-2 rounded hover:bg-lime-400">학과 웹사이트</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--作品集 -->
+    <section id="projects" class="bg-lime-100 py-10">
+        <div class="max-w-7xl mx-auto px-5">
+            <h2 class="text-5xl font-bold mb-5">作品集</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- 職訓 -->
+                <div class="bg-white shadow-md rounded-md p-5">
+                    <h3 class="text-3xl font-bold mb-3">互動式前端網頁設計與開發實務班——手機App UI/UX交互作品</h3>
+                    <p class="text-gray-600 mb-5">上上籤——「好運來，票券輕鬆買」，希望使用此app的使用者都能順利買到票進場享受音樂盛宴。</p>
+                    <div class="flex justify-evenly">
+                        <a href="https://www.figma.com/proto/ztPtoRjPq4miTCBZP0IwYZ/UI%E4%BA%A4%E4%BA%92%E4%BD%9C%E5%93%81-%E4%B8%8A%E4%B8%8A%E7%B1%A4-19%E5%8A%89%E6%87%BF%E8%B3%A2?page-id=0%3A1&node-id=129-323&viewport=-227%2C334%2C0.05&t=Jv6uIN5uqLJtOFl0-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=124%3A246"
+                            class="bg-green-500 text-white px-4 py-2 rounded hover:bg-lime-400">UI交互檔</a>
+                        <a href="https://www.figma.com/deck/QsKU2VXYvcXMnNHpi4vpgs/%E6%88%90%E6%9E%9C%E7%B0%A1%E5%A0%B1-19%E5%8A%89%E6%87%BF%E8%B3%A2?node-id=1-541&viewport=-23114%2C-51%2C0.46&t=MkqIOsibLLc30W9S-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1"
+                            class="bg-green-500 text-white px-2 py-2 rounded hover:bg-lime-400">UI簡報內容</a>
+                    </div>
+                </div>
+                <!-- 校務研究室 -->
+                <div class="bg-white shadow-md rounded-md p-5">
+                    <h3 class="text-3xl font-bold mb-3">輔仁大學高教深耕計畫獲獎之起飛學生分析檔案</h3>
+                    <p class="text-gray-600 mb-5">使用Excel進行資料預處理，再將其導入SPSS進行敘述統計、信效度分析、T檢定、IPA分析。</p>
+                    <div class="flex justify-center">
+                        <a href="https://drive.google.com/file/d/1u-JMAdAhY2S3V3rDw49MT2MEFqjGnxV6/view?usp=sharing"
+                            class="bg-green-500 text-white px-4 py-2 rounded hover:bg-lime-400">分析結果</a>
+                    </div>
+                </div>
+                <!--資料採礦 -->
+                <div class="bg-white shadow-md rounded-md p-5">
+                    <h3 class="text-3xl font-bold mb-3">輔仁大學資料採曠課期末團體報告分析</h3>
+                    <p class="text-gray-600 mb-5">分別使用SPSS和RStudio的關聯法則分析政府公開資料集「101年-臺北市A1及A2類交通事故明細」</p>
+                    <div class="flex justify-center">
+                        <a href="https://drive.google.com/file/d/1xvjk7cXEiVhw_LPl6tUVE_rOb1p7_JE0/view?usp=sharing"
+                            class="bg-green-500 text-white px-4 py-2 rounded hover:bg-lime-400">分析結果</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 聯絡我 -->
+    <section id="contact" class="max-w-7xl mx-auto px-5 py-10">
+        <h2 class="text-5xl font-bold mb-5">聯絡我</h2>
+        <form action="https://formspree.io/f/mqaandzk" method="POST" class="space-y-5">
+            <div>
+                <label for="name" class="block text-gray-700">姓名</label>
+                <input type="text" id="name" name="name"
+                    class="w-full border-2 border-lime-500 rounded p-2 focus:ring-2 focus:ring-green-600 focus:border-green-500"
+                    required style="font-family: 'Noto Sans TC', sans-serif;">
+            </div>
+            <div>
+                <label for="email" class="block text-gray-700">Email</label>
+                <input type="email" id="email" name="email"
+                    class="w-full border-2 border-lime-500 rounded p-2 focus:ring-2 focus:ring-green-600 focus:border-green-500"
+                    required style="font-family: 'Noto Sans TC', sans-serif;">
+            </div>
+            <div>
+                <label for="message" class="block text-gray-700">留言訊息</label>
+                <textarea id="message" name="message"
+                    class="w-full border-2 border-lime-500 rounded p-2 focus:ring-2 focus:ring-green-600 focus:border-green-500"
+                    required style="font-family: 'Noto Sans TC', sans-serif;"></textarea>
+            </div>
+            <div class="flex justify-center">
+                <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-lime-400"
+                    style="font-family: 'Noto Sans TC', sans-serif;">傳送訊息</button>
+            </div>
+
+        </form>
+    </section>
+
+    <!-- 頁尾 done -->
+    <footer class="bg-gray-500 text-white py-5">
+        <div class="max-w-7xl mx-auto px-5 text-center">
+            <small class="text-3xl">&copy;2025 劉懿賢個人網站 | 歡迎透過底下幾種方式與我聯絡</small>
+            <div class="space-x-3 mt-3">
+                <a href="https://www.linkedin.com/in/yi-hsien-liu-a557972a2?trk=contact-info"
+                    class="text-xl text-green-500 hover:text-lime-400">LinkedIn</a>
+                <a href="https://www.instagram.com/yihsien88?igsh=MTgwdWVqcGI5Mmxl"
+                    class="text-xl text-green-500 hover:text-lime-400">Instagram</a>
+                <a href="mailto:k1564ann@gmail.com" class="text-xl text-green-500 hover:text-lime-400">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        //監聽漢堡按鈕，顯示/隱藏手機版菜單
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuButton.addEventListener('click', () => {
+            //切換顯示/隱藏菜單
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
