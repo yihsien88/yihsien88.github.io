@@ -64,7 +64,7 @@
                 <li><a href="#contact" class="hover:text-green-500"
                         style="font-family: 'ChenYuluoyan', sans-serif; ">聯絡我</a></li>
                 <!-- 語言切換下拉選單 -->
-                <li>
+                <!-- <li>
                     <select id="language-selector" class="bg-lime-300 p-2 rounded text-sm max-w-xs"
                         onchange="location.href = this.value;">
                         <option class="text-lg text-green-500 px-3 py-2 rounded" value="index.html">繁體中文</option>
@@ -72,7 +72,7 @@
                         <option class="text-lg text-green-500 px-3 py-2 rounded" value="index-en.html">English</option>
                         <option class="text-lg text-green-500 px-3 py-2 rounded" value="index-kr.html">한국어</option>
                     </select>
-                </li>
+                </li> -->
             </ul>
             <!-- 手機版漢堡按鈕 -->
             <div class="md:hidden flex items-center" id="menu-button">
@@ -86,7 +86,7 @@
                 <li><a href="#education" class="block text-green-500">學歷</a></li>
                 <li><a href="#projects" class="block text-green-500">作品集</a></li>
                 <li><a href="#contact" class="block text-green-500">聯絡我</a></li>
-                <!-- 語言切換 -->
+                <!-- 語言切換
                 <li>
                     <select id="language-selector-mobile" class="bg-lime-300 p-2 rounded text-sm"
                         onchange="location.href = this.value;">
@@ -95,14 +95,14 @@
                         <option class="text-lg text-green-500 px-3 py-2 rounded" value="index-en.html">English</option>
                         <option class="text-lg text-green-500 px-3 py-2 rounded" value="index-kr.html">한국어</option>
                     </select>
-                </li>
+                </li> -->
             </ul>
         </div>
     </header>
 
     <!-- 首頁 -->
-    <div class="relative min-h-[100vh]" style="background-image: url('./images/background\ photo2.jpg')">
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-800 opacity-70"> </div>
+    <div class="relative min-h-[100vh]" style="background-image: url('./images/banner.svg')">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-700 opacity-50"> </div>
         <div class="absolute inset-0 flex flex-col items-center justify-center text-white z-10 space-y-4">
             <h1 class="text-4xl md:text-6xl">哈囉！</h1>
             <h1 class="text-3xl">歡迎來到劉懿賢的個人網頁</h1>
@@ -277,6 +277,25 @@
                             class="bg-green-500 text-white px-2 py-2 rounded hover:bg-lime-400">UI簡報內容</a>
                     </div>
                 </div>
+                <!-- 職訓分析-->
+                <div class="bg-white shadow-md rounded-md p-5">
+                    <h3 class="text-3xl font-bold mb-3">互動式前端網頁設計與開發實務班——團體專題問卷設計調查與分析</h3>
+                    <p class="text-gray-600 mb-5">將收集到的問卷以圓餅圖和文字雲圖（使用Python製作）呈現，並將回應結果作為網站平台的重要參考依據。</p>
+                    <div class="flex justify-evenly">
+                        <a href="https://drive.google.com/file/d/1Ox-8N_78X_Z4s-G5io-0y1QmOMf0KW6o/view?usp=sharing"
+                            class="bg-green-500 text-white px-4 py-2 rounded hover:bg-lime-400">分析結果</a>
+                    </div>
+                </div>
+                <!-- 畢業專題-->
+                <div class="bg-white shadow-md rounded-md p-5">
+                    <h3 class="text-3xl font-bold mb-3">輔仁大學統資系畢業專題——廣告過度曝光對於消費行為的探討</h3>
+                    <p class="text-gray-600 mb-5">使用五大人格特質進行食品廣告（SNIKERS）和運動球鞋廣告（ADIDAS）做分析，負責部分為信效度分析、ANOVA分析、雷達圖分析。
+                    </p>
+                    <div class="flex justify-evenly">
+                        <a href="https://drive.google.com/file/d/19-QzeCCCqTDcsHXPysD6rCJvfTyZGCod/view?usp=sharing"
+                            class="bg-green-500 text-white px-4 py-2 rounded hover:bg-lime-400">分析結果</a>
+                    </div>
+                </div>
                 <!-- 校務研究室 -->
                 <div class="bg-white shadow-md rounded-md p-5">
                     <h3 class="text-3xl font-bold mb-3">輔仁大學高教深耕計畫獲獎之起飛學生分析檔案</h3>
@@ -329,7 +348,7 @@
         </form>
     </section>
 
-    <!-- 頁尾 done -->
+    <!-- 頁尾  -->
     <footer class="bg-gray-500 text-white py-5">
         <div class="max-w-7xl mx-auto px-5 text-center">
             <small class="text-3xl"> &copy; 2025 劉懿賢個人網站 | 歡迎透過底下幾種方式與我聯絡</small>
