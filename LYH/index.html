@@ -125,6 +125,109 @@
         </div>
     </section>
 
+    <!-- 證照 -->
+    <section id="cetification" class="py-10">
+        <div class="max-w-7xl mx-auto px-5">
+            <h2 class="text-5xl font-bold mb-5">證照</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="flex flex-col items-start">
+                    <!-- TOEIC -->
+                    <div>
+                        <p class="text-gray-600 mb-5 underline hover:text-lime-400">
+                            <a href="#" id="toeic-link">★多益845分</a>
+                        </p>
+                        <div id="toeic-image" style="display: none;">
+                            <img src="./images/多益845.jpg" alt="多益證照" class="w-full max-w-md mx-auto">
+                        </div>
+                    </div>
+                    <!-- TOPIK -->
+                    <div>
+                        <p class="text-gray-600 mb-5 underline hover:text-lime-400">
+                            <a href="#" id="topik-link">★TOPIK 五級（註解：TOPIK滿級為六級）</a>
+                        </p>
+                        <div id="topik-image" style="display: none;">
+                            <img src="./images/2022-韓文檢定.jpg" alt="韓檢證照" class="w-full max-w-md mx-auto">
+                        </div>
+                    </div>
+                    <!-- 職訓 -->
+                    <div>
+                        <p class="text-gray-600 mb-5 underline hover:text-lime-400">
+                            <a href="#" id="training-link">★職訓證明（互動式前端網頁設計與開發實務班）</a>
+                        </p>
+                        <div id="training-image" style="display: none;">
+                            <img src="./images/職訓證明.jpg" alt="職訓證明" class="w-full max-w-md mx-auto">
+                        </div>
+                    </div>
+                    <!-- GA -->
+                    <div>
+                        <p class="text-gray-600 mb-5 underline hover:text-lime-400">
+                            <a href="#" id="ga-link">★Google Analytics個人認證</a>
+                        </p>
+                        <div id="ga-image" style="display: none;">
+                            <img src="./images/ga個人認證.jpg" alt="Google Analytics個人認證" class="w-full max-w-md mx-auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- TOEIC控制顯示隱藏 -->
+    <script>
+        document.getElementById('toeic-link').addEventListener('click', function (event) {
+            event.preventDefault();  // 阻止超連結的預設行為
+            var image = document.getElementById('toeic-image');
+
+            // 切換圖片的顯示和隱藏
+            if (image.style.display === 'none' || image.style.display === '') {
+                image.style.display = 'block';
+            } else {
+                image.style.display = 'none';
+            }
+        });
+    </script>
+    <!-- TOPIK控制顯示隱藏 -->
+    <script>
+        document.getElementById('topik-link').addEventListener('click', function (event) {
+            event.preventDefault();  // 阻止超連結的預設行為
+            var image = document.getElementById('topik-image');
+
+            // 切換圖片的顯示和隱藏
+            if (image.style.display === 'none' || image.style.display === '') {
+                image.style.display = 'block';
+            } else {
+                image.style.display = 'none';
+            }
+        });
+    </script>
+    <!-- 職訓職訓控制顯示隱藏 -->
+    <script>
+        document.getElementById('training-link').addEventListener('click', function (event) {
+            event.preventDefault();  // 阻止超連結的預設行為
+            var image = document.getElementById('training-image');
+
+            // 切換圖片的顯示和隱藏
+            if (image.style.display === 'none' || image.style.display === '') {
+                image.style.display = 'block';
+            } else {
+                image.style.display = 'none';
+            }
+        });
+    </script>
+    <!-- GA控制顯示隱藏 -->
+    <script>
+        document.getElementById('ga-link').addEventListener('click', function (event) {
+            event.preventDefault();  // 阻止超連結的預設行為
+            var image = document.getElementById('ga-image');
+
+            // 切換圖片的顯示和隱藏
+            if (image.style.display === 'none' || image.style.display === '') {
+                image.style.display = 'block';
+            } else {
+                image.style.display = 'none';
+            }
+        });
+    </script>
+
     <!-- 學歷 -->
     <section id="education" class="bg-cyan-50 py-10">
         <div class="max-w-7xl mx-auto px-5">
@@ -229,7 +332,7 @@
     <!-- 頁尾 done -->
     <footer class="bg-gray-500 text-white py-5">
         <div class="max-w-7xl mx-auto px-5 text-center">
-            <small class="text-3xl">&copy;2025 劉懿賢個人網站 | 歡迎透過底下幾種方式與我聯絡</small>
+            <small class="text-3xl"> &copy; 2025 劉懿賢個人網站 | 歡迎透過底下幾種方式與我聯絡</small>
             <div class="space-x-3 mt-3">
                 <a href="https://www.linkedin.com/in/yi-hsien-liu-a557972a2?trk=contact-info"
                     class="text-xl text-green-500 hover:text-lime-400">LinkedIn</a>
@@ -250,5 +353,5 @@
         });
     </script>
 </body>
-    
+
 </html>
