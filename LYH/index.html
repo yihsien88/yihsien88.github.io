@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>劉懿賢個人網站</title>
 
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=54516992"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '54516992');
+    </script>
+
     <!-- Logo -->
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
@@ -118,9 +129,16 @@
             <p class="text-lg text-gray-600"> <img src="./images/photo1.jpg" alt="關於我"
                     class="w-full h-auto rounded-3xl object-cover mb-5 md:mb-0">
             <p class="text-xl text-gray-600 text-base/7">
-                哈囉！我是來自桃園的劉懿賢，一個守時與隨和的人。平常喜歡追劇、聽音樂、聽演唱會和收集明信片。<br><br>擁有跨領域背景，國立臺北商業大學應用外語科五專部畢業後，
-                插大到輔仁大學統計資訊學系就讀。目前考有TOEIC 845分和TOPIK 五級等兩張外文證照，Google Analytics分析等一張分析證照，這些成就證明
-                我在外語和統計方面的努力與成果。<br><br>從2024年10月至2025年01月參加勞動部產業新尖兵「互動式前端網頁設計與開發實務班（第7梯次）」，學會使用Figma進行UI/UX設計和前端程式（HTML、CSS、JavaScript）。
+                我是來自桃園的劉懿賢，擁有跨領域的學習與工作背景。畢業於國立台北商業大學應用外語科，後來插大至輔仁大學統計資訊學系獲得學士學位。<br><br>
+
+                我自小對語言充滿熱情，在首都求學期間，於國文和英文課程中表現優異，並獲得TOEIC 845分與TOPIK五級。專二時接觸統計學，發現自己對數據分析有濃厚興趣，該課程成績100分，並因此選擇插大至輔仁大學。<br><br>
+
+                為了累積專業經驗，在校期間於校務研究室實習。畢業後，先後擔任國科會與聯合醫院的研究助理，主要負責數據分析，熟練使用Excel、Python、RStudio、SPSS、Prism等工具，並用Power
+                BI製作圖表。<br><br>
+
+                為提升專業技能，我報名勞動部職訓局的前端設計課程，學會使用Figma進行UI/UX設計與前端程式（HTML、CSS、JavaScript），並設計了個人網站。<br><br>
+
+                我相信「適應力」與「學習力」是我的核心競爭力，無論面對挑戰或學習新技能，我都能迅速調整並持續進步！
             </p>
         </div>
     </section>
@@ -169,6 +187,68 @@
                     </div>
                 </div>
             </div>
+    </section>
+
+    <!--技能-->
+    <section id="cetification" class="py-10">
+        <div class="max-w-7xl mx-auto px-5">
+            <h2 class="text-5xl font-bold mb-5">技能</h2>
+            <h2 class="text-4xl font-bold mb-5">◎統計軟體</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="flex flex-col items-start">
+                    <!-- ◎統計軟體 -->
+                    <div>
+                        <p class="text-gray-600 mb-5">
+                            SPSS, Python, Prism, RStudio
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <h2 class="text-4xl font-bold mb-5">◎前端軟體</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="flex flex-col items-start">
+                    <!-- ◎前端軟體 -->
+                    <div>
+                        <p class="text-gray-600 mb-5">
+                            HTML, CSS, JavaScript
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <h2 class="text-4xl font-bold mb-5">◎設計軟體</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="flex flex-col items-start">
+                    <!-- ◎設計軟體-->
+                    <div>
+                        <p class="text-gray-600 mb-5">
+                            Figma
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <h2 class="text-4xl font-bold mb-5">◎辦公室軟體</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="flex flex-col items-start">
+                    <!-- ◎辦公室軟體-->
+                    <div>
+                        <p class="text-gray-600 mb-5">
+                            Excel, PowerPoint, Word, Outlook
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <h2 class="text-4xl font-bold mb-5">◎視覺化軟體</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="flex flex-col items-start">
+                    <!-- ◎視覺化軟體-->
+                    <div>
+                        <p class="text-gray-600 mb-5">
+                            Power BI
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- TOEIC控制顯示隱藏 -->
@@ -280,7 +360,8 @@
                 <!-- 職訓分析-->
                 <div class="bg-white shadow-md rounded-md p-5">
                     <h3 class="text-3xl font-bold mb-3">互動式前端網頁設計與開發實務班——團體專題問卷設計調查與分析</h3>
-                    <p class="text-gray-600 mb-5">將收集到的問卷以圓餅圖和文字雲圖（使用Python製作）呈現，並將回應結果作為網站平台的重要參考依據。</p>
+                    <p class="text-gray-600 mb-5">將收集到的問卷以圓餅圖和文字雲圖（使用Python製作）呈現，並將回應結果作為網站平台的重要參考依據。
+                    </p>
                     <div class="flex justify-evenly">
                         <a href="https://drive.google.com/file/d/1Ox-8N_78X_Z4s-G5io-0y1QmOMf0KW6o/view?usp=sharing"
                             class="bg-green-500 text-white px-4 py-2 rounded hover:bg-lime-400">分析結果</a>
@@ -289,7 +370,8 @@
                 <!-- 畢業專題-->
                 <div class="bg-white shadow-md rounded-md p-5">
                     <h3 class="text-3xl font-bold mb-3">輔仁大學統資系畢業專題——廣告過度曝光對於消費行為的探討</h3>
-                    <p class="text-gray-600 mb-5">使用五大人格特質進行食品廣告（SNIKERS）和運動球鞋廣告（ADIDAS）做分析，負責部分為信效度分析、ANOVA分析、雷達圖分析。
+                    <p class="text-gray-600 mb-5">
+                        使用五大人格特質進行食品廣告（SNIKERS）和運動球鞋廣告（ADIDAS）做分析，負責部分為信效度分析、ANOVA分析、雷達圖分析。
                     </p>
                     <div class="flex justify-evenly">
                         <a href="https://drive.google.com/file/d/19-QzeCCCqTDcsHXPysD6rCJvfTyZGCod/view?usp=sharing"
@@ -308,7 +390,8 @@
                 <!--資料採礦 -->
                 <div class="bg-white shadow-md rounded-md p-5">
                     <h3 class="text-3xl font-bold mb-3">輔仁大學資料採曠課期末團體報告分析</h3>
-                    <p class="text-gray-600 mb-5">分別使用SPSS和RStudio的關聯法則分析政府公開資料集「101年-臺北市A1及A2類交通事故明細」</p>
+                    <p class="text-gray-600 mb-5">分別使用SPSS和RStudio的關聯法則分析政府公開資料集「101年-臺北市A1及A2類交通事故明細」
+                    </p>
                     <div class="flex justify-center">
                         <a href="https://drive.google.com/file/d/1xvjk7cXEiVhw_LPl6tUVE_rOb1p7_JE0/view?usp=sharing"
                             class="bg-green-500 text-white px-4 py-2 rounded hover:bg-lime-400">分析結果</a>
