@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>劉懿賢個人網站</title>
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TBLB44SR5G"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -14,7 +14,7 @@
         gtag('js', new Date());
 
         gtag('config', 'G-TBLB44SR5G');
-    </script>ㄑ
+    </script>
 
     <!-- Logo -->
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
@@ -432,8 +432,8 @@
     </section>
 
     <!-- 頁尾  -->
-    <footer class="bg-gray-500 text-white py-5">
-        <div class="max-w-7xl mx-auto px-5 text-center">
+    <footer class="bg-teal-500/50 text-white py-5">
+        <div class="max-w-3xl mx-auto px-5 text-center">
             <small class="text-3xl"> &copy; 2025 劉懿賢個人網站 | 歡迎透過底下幾種方式與我聯絡</small>
             <div class="space-x-3 mt-3">
                 <a href="https://www.linkedin.com/in/yi-hsien-liu-a557972a2?trk=contact-info"
@@ -454,6 +454,28 @@
             mobileMenu.classList.toggle('hidden');
         });
     </script>
-</body>
 
+    <!-- TOP 按钮 -->
+    <button id="toTop" class="fixed bottom-28 right-5 bg-lime-400 text-white p-4 rounded-xl hidden hover:bg-lime-300"
+        title="回到首頁" style="font-family:'Noto Sans TC' ;">
+        <span> ↑<br>TOP</span>
+    </button>
+
+    <script>
+        var toTopButton = document.getElementById("toTop");
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                toTopButton.classList.remove("hidden");
+            } else {
+                toTopButton.classList.add("hidden");
+            }
+        };
+
+        toTopButton.onclick = function () {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        };
+    </script>
+</body>
 </html>
